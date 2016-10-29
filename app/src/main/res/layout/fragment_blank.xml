@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.yazhai1226.androidtest.BlanckFragment">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_chat"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/iv_point1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_select_point"
+            />
+
+        <ImageView
+            android:id="@+id/iv_point2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/icon_normal_point"
+            />
+
+        <ImageView
+            android:id="@+id/iv_point3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/icon_normal_point"
+            />
+
+        <ImageView
+            android:id="@+id/iv_point4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/icon_normal_point"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="#EDEDED"
+        >
+
+        <TextView
+            android:id="@+id/tv_chat_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="充值"
+            android:textSize="16sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_chat_next"
+                android:layout_width="58dp"
+                android:layout_height="28dp"
+                android:background="@drawable/shape_chat_btn_more"
+                android:gravity="center"
+                android:text="1>"
+                />
+
+            <TextView
+                android:id="@+id/tv_chat_give"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_chat_btn_give"
+                android:gravity="center"
+                android:text="赠送"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                tools:context=".ui.fragment.ChatGiftRechargeFragment">
+
+    <com.example.yazhai1226.androidtest.view.zhaibaView.ChatGiftRechargePopupWindow.LineGridView
+        android:padding="2dp"
+        android:id="@+id/gv_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:gravity="center"
+        android:numColumns="5"
+        android:stretchMode="columnWidth"
+        >
+    </com.example.yazhai1226.androidtest.view.zhaibaView.ChatGiftRechargePopupWindow.LineGridView>
+
+</RelativeLayout>
