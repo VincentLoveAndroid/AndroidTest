@@ -9,9 +9,11 @@ import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.content.Context;
 import android.graphics.Outline;
 import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
@@ -42,18 +44,23 @@ import java.util.List;
 public class MainActivity extends Activity {
 
 
-    public  List<String> list = new ArrayList<>();
+    public List<String> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        list.add("哈哈");
-        MyAdapter adapter = new MyAdapter(list);
-        adapter.print();
-        System.out.println("后");
-        list.add("卡卡");
-        adapter.print();
+
+        DownloadManager downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://game.down.yazhai.com/zjh/gf_yzzb.apk"));
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setTitle("正在下载游戏");
+
+        downloadManager.enqueue(request);
+        //通过createPackageContext拿到的context必须是安装的apk
+        this.createPackageContext("com.dn.cloud",flags)
     }
+
 }

@@ -6,3 +6,4 @@ package com.example.yazhai1226.androidtest;
 public interface Listener {
     void setIamge();
 }
+

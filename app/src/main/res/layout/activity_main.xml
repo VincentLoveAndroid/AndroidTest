@@ -6,5 +6,8 @@
     android:layout_height="match_parent"
     android:background="#fff"
     tools:context="com.example.yazhai1226.androidtest.MainActivity">
-
+<ImageView
+    android:id="@+id/tv_test"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
 </RelativeLayout>

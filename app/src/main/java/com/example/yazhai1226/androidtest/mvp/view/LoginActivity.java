@@ -3,6 +3,7 @@ package com.example.yazhai1226.androidtest.mvp.view;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -26,6 +27,8 @@ public class LoginActivity extends Activity implements IView, View.OnClickListen
     private EditText etName;
     private EditText etPsw;
     private IPresenter presenter;
+    private Bitmap mBitmap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +90,7 @@ public class LoginActivity extends Activity implements IView, View.OnClickListen
         switch (v.getId()) {
             case R.id.tv_login:
                 presenter.Login(etName.getText().toString().trim(), etPsw.getText().toString().trim());
-                startActivity(new Intent(this,MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 break;
             case R.id.tv_clear_text:
                 presenter.clearText();
